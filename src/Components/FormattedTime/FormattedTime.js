@@ -1,7 +1,7 @@
 import styles from './Formatted.module.scss';
 
 const FormattedTime = (props) => {
-    const converTime = (miliseconds) => {
+    const formatTime = (miliseconds) => {
       let milliseconds = Math.floor(miliseconds % 1000);
       let seconds = Math.floor((miliseconds / 1000) % 60);
       let minutes = Math.floor((miliseconds / (1000 * 60)) % 60);
@@ -15,7 +15,7 @@ const FormattedTime = (props) => {
     };
   
     return (
-    <div className={styles.timeFormat}>{converTime(props.time)}</div>
+    <div className={styles.timeFormat}>{formatTime(props.time)}</div>
     )
   };
 
